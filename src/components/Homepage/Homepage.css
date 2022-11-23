@@ -1,0 +1,79 @@
+.middle{
+    display: flex;
+   justify-content: space-around;
+   width: 100vw;
+   /* height: 80vh; */
+}
+.left-box{
+    height: 80vh;
+    width: 49%;
+    padding-left: 150px;
+    box-sizing: border-box;
+
+}
+.right-box{
+    width: 49%;
+    text-align: left;
+    background-color: #B9C0FD1A;
+    padding-left: 130px;
+    padding-top: 84px;
+}
+.name{
+    font-size: 80px;
+    color: #5861AE;
+    margin-bottom: 0;
+}
+.description{
+    font-size: 20px;
+    color: #565657;
+    opacity: 1;
+}
+.question{
+    padding-top: 74px;
+    font-size: 16px;
+}
+.register{
+    border: 2px solid #4552C1;
+    color: #4552C1;
+    background-color: #FFFFFF;
+    padding: 16px 43px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.signin{
+    color: #4552C1;
+    font-size: 32px;
+    padding-bottom: 65px;
+   
+}
+.forget{
+    display: block;
+    font-size: 16px;
+    color: #4552C1;
+}
+.right-box .forget{
+    padding-left: 194px;
+}
+.sinput input{
+     width: 310px;
+     border: none;
+     border-bottom: 1px solid #77838F;
+     
+}
+
+.pass{
+    margin-bottom: 0px;
+}
+
+.Email{
+    margin-bottom: 60px;
+}
+.signinbtn{
+    color: #FFFFFF;
+    background-color: #4552C1;
+    cursor: pointer;
+    padding: 14px 49px;
+    border-radius: 6px;
+    margin-top: 60px;
+    margin-left: 80px;
+}
