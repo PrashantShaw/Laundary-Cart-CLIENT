@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 12.5vh;
+    box-shadow: 0 5px 15px -10px #ccc;
+    margin-top: 0;
+    
+}
+.ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 30px;
+    font-size: 14px;
+
+}
+
+.side-name{
+    margin-left: 90px;
+    color: #5861AE;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.ul :last-child{
+    background-color: #5861AE;
+    color: #FFFFFF;
+    
+}

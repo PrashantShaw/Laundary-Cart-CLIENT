@@ -1,0 +1,42 @@
+.regbody{
+    display: flex;
+}
+.left{
+    width: 25%;
+    padding-left: 70px;
+    padding-top: 80px;
+}
+.rname{
+  font-size: 62px;
+  color: #5861AE;
+}
+.rdescription{
+    font-size: 20px;
+    color: #565657;
+    margin: 0;
+}
+.rquestion{
+    font-size: 16px;
+    color:#565657 ;
+    padding-top: 80px;
+
+}
+.rlogin{
+    font-size: 15px;
+    border: 2px solid #5861AE;
+    color: #5861AE;
+    background-color: white;
+    padding: 14px 48px;
+    margin-bottom: 40px;
+}
+.right{
+    width: 75%;
+   background-color: #F8F9FF;
+   padding-left: 80px;
+}
+
+.rhead{
+    color: #5861AE;
+    font-size: 32px;
+    padding-top: 60px;
+}
