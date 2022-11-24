@@ -12,7 +12,7 @@ function App() {
     {/* <Middle/> */}
     <Register/>
     <Footer/>
-    <Product/>z
+    <Product/>
     <TopNavBar />
     </>
   );
