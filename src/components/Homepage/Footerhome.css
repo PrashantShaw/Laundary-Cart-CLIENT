@@ -1,0 +1,43 @@
+.mainfooter{
+    display: flex;
+    margin-left: 150px;
+    background-image: url(./footerhomeimg/Footer.png);
+}
+.about{
+   color: #3D3D43;
+}
+.pricing{
+    color: #3D3D43;
+}
+.home{
+    display: flex;
+    color: #3D3D43;
+    flex-direction: column;
+    margin-left: 200px;
+    margin-right: 80px;
+}
+.career{
+    display: flex;
+    color: #3D3D43;
+    flex-direction: column;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.social{
+    display: flex;
+    color: #3D3D43;
+    flex-direction: column;
+    margin-left: 100px;
+    font-size: 18px;
+}
+.imgfm{
+    padding: 10px;
+}
+.career span{
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+.home span{
+    padding-bottom: 10px;
+    font-size: 14px;
+}

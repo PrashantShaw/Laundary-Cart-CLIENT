@@ -1,11 +1,11 @@
 import "./Homepage.css"
 
 
-const Middle=()=>{
-    return <>
-    <div className="middle">
+const Middle = () => {
+   return <>
+      <div className="middle">
          <div className="left-box">
-            <h2 className="name">Laundry <br/>Service</h2>
+            <h2 className="name">Laundry <br />Service</h2>
             <p className="description">Doorstep Wash & Dryclean Service</p>
             <p className="question">Don’t Have An Account?</p>
             <button className="register">Register</button>
@@ -13,15 +13,19 @@ const Middle=()=>{
          <div className="right-box">
             <h2 className="signin">SIGN IN</h2>
             <div className="sinput">
-            <input className="Email" type="text" name="Mobile/Email" placeholder="Mobile/Email"></input><br/>
-            <input className="pass" type="password" name="Password" placeholder="Password"></input>
+               <input className="Email" type="text" name="Mobile/Email" placeholder="Mobile/Email"/><br />
+               <div className="passdiv">
+                  <input className="pass" type="password" name="Password" placeholder="Password" />
+                  <img className="img" src={require('./padlock.png')} alt="any" />
+               </div>
+
             </div>
             <span className="forget">Forget Password?</span>
             <button className="signinbtn">Sign In</button>
-            
+
          </div>
-    </div>
-    </>
+      </div>
+   </>
 }
 
 export default Middle
