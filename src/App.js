@@ -14,12 +14,12 @@ function App() {
     <Middle/> */}
     {/* <Register/> */}
     {/* <Footer/>
-    
     <Footerhome/>
     <Border/> */}
     <Summery/>
     </>
   );
 }
+
 
 export default App;
