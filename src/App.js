@@ -2,18 +2,21 @@ import './App.css';
 import Header from './components/Homepage/Nav';
 import Middle from './components/Homepage/Homepage';
 import { Footer } from './components/Homepage/Footer';
+import Border from './components/Border';
+import Footerhome from './components/Homepage/Footerhome';
 import Register from './components/Register/Register';
-import TopNavBar from './components/CreatingOrder/CreatingOrder';
-import Product from './components/OrdersList/OrdersList';
+import Summery from './components/summery';
+
 function App() {
   return (
     <>
-    <Header/>
-    {/* <Middle/> */}
-    <Register/>
-    <Footer/>
-    <Product/>
-    <TopNavBar />
+    {/* <Header/>
+    <Middle/> */}
+    {/* <Register/> */}
+    {/* <Footer/>
+    <Footerhome/>
+    <Border/> */}
+    <Summery/>
     </>
   );
 }
