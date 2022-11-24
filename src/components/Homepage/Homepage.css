@@ -1,8 +1,7 @@
 .middle{
     display: flex;
    justify-content: space-around;
-   width: 100vw;
-   /* height: 80vh; */
+  
 }
 .left-box{
     height: 80vh;
@@ -37,14 +36,14 @@
     color: #4552C1;
     background-color: #FFFFFF;
     padding: 16px 43px;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
 }
 .signin{
     color: #4552C1;
     font-size: 32px;
     padding-bottom: 65px;
-   
+
 }
 .forget{
     display: block;
@@ -54,15 +53,22 @@
 .right-box .forget{
     padding-left: 194px;
 }
-.sinput input{
+.sinput>input{
      width: 310px;
      border: none;
      border-bottom: 1px solid #77838F;
-     
+     background-color: #B9C0FD1A ;
 }
 
 .pass{
-    margin-bottom: 0px;
+    width: 290px;
+    border: none;
+    background-color: #B9C0FD1A ;
+} 
+.passdiv{
+    width: 310px;
+    border-bottom: 1px solid #77838F;
+   
 }
 
 .Email{
@@ -73,7 +79,12 @@
     background-color: #4552C1;
     cursor: pointer;
     padding: 14px 49px;
-    border-radius: 6px;
+    border-radius: 5px;
     margin-top: 60px;
     margin-left: 80px;
+    border: none;
+}
+.img{
+    width: 10px;
+    height: 15px;
 }
