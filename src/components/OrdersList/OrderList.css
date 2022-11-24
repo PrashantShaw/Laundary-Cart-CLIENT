@@ -22,10 +22,10 @@
 .product_description h3{
     margin:0;
    
-        /* font: normal normal 600 14px/48px Open Sans; */
-        letter-spacing: 0px;
+    
+        
         color: #1D2022;
-        opacity: 1;
+        
         font-family: Open Sans;
 }
 

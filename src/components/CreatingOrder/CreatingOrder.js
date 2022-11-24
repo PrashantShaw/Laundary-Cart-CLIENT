@@ -5,8 +5,7 @@ import more from "../Assests/more.png"
 import './CreatingOrder.css';
 
 const TopNavBar = () => {
-  const user= ""
-  //const navigate =useNavigate();
+  const user= "";
     return (
     <>
       <div className="header_container">
@@ -39,7 +38,7 @@ const TopNavBar = () => {
         <img src={list} alt="list" />
        </div>
       </div>
-      {/* <h2 className="heading">Create order</h2> */}
+      
               <button
                 onClick={() => {
                   navigate("/createOrder");
