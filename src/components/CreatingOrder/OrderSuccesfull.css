@@ -1,0 +1,41 @@
+.success_container {
+    height: 53vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: azure;
+    border: white;
+    margin-top: 150px;
+    margin-left: 570px;
+}
+
+.order_success_msg {
+    width: 200px;
+    text-align: center;
+}
+
+.order_success_msg p {
+    color: #0A1F44;
+    display: flex;
+    font-size: 24px;
+}
+
+.track_order_msg p {
+    color: #0A1F44;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+.goto_order_button {
+    color: white;
+    background-color: #5861AE;
+    width: 150px;
+    height: 44px;
+    border-radius: 22px;
+    font-size: 17px;
+    cursor: pointer;
+    letter-spacing: -0.41px;
+}
