@@ -1,0 +1,54 @@
+.success_container {
+    height: 53vh;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 7px;
+    border: white;
+    margin: 150px auto 0;
+}
+
+.order_success_msg {
+    width: 200px;
+    text-align: center;
+}
+
+.order_success_msg p {
+    color: #0A1F44;
+    display: flex;
+    font-size: 24px;
+}
+
+.track_order_msg p {
+    color: #0A1F44;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+}
+
+.goto_order_button {
+    color: white;
+    background-color: #5861AE;
+    width: 150px;
+    height: 44px;
+    border-radius: 22px;
+    font-size: 17px;
+    cursor: pointer;
+    letter-spacing: -0.41px;
+    border: 1px solid #5861AE;
+}
+.success-popup{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.29);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+.success-msg{
+    font-weight: bold;
+}
