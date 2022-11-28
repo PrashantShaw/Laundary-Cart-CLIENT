@@ -2,6 +2,7 @@ import axios from 'axios'
 
 
 // const url = 'http://localhost:5000'
+// const url = 'https://laundary-cart-server.onrender.com'
 const url = 'https://laundary-cart-server.onrender.com'
 
 export const getOrders = async () => {
@@ -38,7 +39,7 @@ export const login = async (phoneOrEmail, password) => {
 }
 export const register = async (userInfo) => {
     try {
-        // console.log(phoneOrEmail, password)
+        console.log(userInfo)
         const response = axios.post(
             `${url}/register`,
             { ...userInfo }
