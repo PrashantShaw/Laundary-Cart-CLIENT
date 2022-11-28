@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import './Register.css'
 import Header from '../Homepage/Nav'
 import { Footer } from '../Homepage/Footer'
@@ -20,10 +20,10 @@ const Register = () => {
   const pincodeRef = useRef(null)
   const passwordRef = useRef(null)
 
-  const [userInfo, setUserInfo] = useState({})
+  // const [userInfo, setUserInfo] = useState({})
 
   function onRegisterHandler() {
-    setUserInfo({
+    const userInfo = {
       name: nameRef.current.value,
       email: emailRef.current.value,
       phoneNo: phoneRef.current.value,
@@ -32,14 +32,15 @@ const Register = () => {
       address: addressRef.current.value,
       pincode: pincodeRef.current.value,
       password: passwordRef.current.value,
-    })
+    }
 
     register(userInfo)
       .then(res => {
         console.log(res)
         alert("Registration Successfull.")
         navigate('/')
-      }).catch(err=>console.log(err))
+      })
+      .catch(err => console.log(err))
 
   }
 
