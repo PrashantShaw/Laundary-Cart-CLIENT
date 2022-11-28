@@ -1,22 +1,21 @@
 import './App.css';
-import Header from './components/Homepage/Nav';
-import Middle from './components/Homepage/Homepage';
-import { Footer } from './components/Homepage/Footer';
-import Border from './components/Border';
-import Footerhome from './components/Homepage/Footerhome';
+import HomePage from './components/Homepage/Homepage';
 import Register from './components/Register/Register';
-import Summery from './components/summery';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import OrdersListPage from './components/CreatingOrder/OrdersListPage';
+import CreateOrder from './components/CreatingOrder/CreateOrder';
 
 function App() {
   return (
     <>
-    {/* <Header/>
-    <Middle/> */}
-    {/* <Register/> */}
-    {/* <Footer/>
-    <Footerhome/>
-    <Border/> */}
-    <Summery/>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/orders' element={<OrdersListPage />} />
+          <Route path='/create' element={<CreateOrder />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

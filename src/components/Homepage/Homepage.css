@@ -14,7 +14,7 @@
     width: 49%;
     text-align: left;
     background-color: #B9C0FD1A;
-    padding-left: 130px;
+    /* padding-left: 130px; */
     padding-top: 84px;
 }
 .name{
@@ -43,7 +43,7 @@
     color: #4552C1;
     font-size: 32px;
     padding-bottom: 65px;
-
+    padding: 10px 0 10px 200px;
 }
 .forget{
     display: block;
@@ -58,33 +58,43 @@
      border: none;
      border-bottom: 1px solid #77838F;
      background-color: #B9C0FD1A ;
+     padding: 10px 0;
+}
+.sinput{
+    border-left: 3px solid #ccc;
+    padding: 10px 0 10px 200px;
 }
 
 .pass{
     width: 290px;
     border: none;
     background-color: #B9C0FD1A ;
+    padding: 10px 0;
 } 
 .passdiv{
     width: 310px;
     border-bottom: 1px solid #77838F;
-   
+    margin-top: 60px;
 }
 
-.Email{
-    margin-bottom: 60px;
-}
+
 .signinbtn{
     color: #FFFFFF;
     background-color: #4552C1;
     cursor: pointer;
     padding: 14px 49px;
     border-radius: 5px;
-    margin-top: 60px;
-    margin-left: 80px;
     border: none;
 }
 .img{
     width: 10px;
     height: 15px;
+}
+.signIn-btn{
+    text-align: center;
+    margin-top: 60px;
+}
+.error-msg{
+    color: red;
+    font-size: 10px;
 }

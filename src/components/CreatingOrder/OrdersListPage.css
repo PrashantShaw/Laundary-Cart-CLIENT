@@ -1,0 +1,336 @@
+body {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    box-shadow: 0 5px 15px -10px #ccc;
+    margin-top: 0;
+    /* border: 2px solid red; */
+    z-index: 5;
+}
+
+.ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 28.5px;
+    font-size: 14px;
+    /* border: 2px solid green; */
+}
+
+.ul {
+    margin: 0;
+}
+
+.side-name {
+    margin-left: 90px;
+    color: #5861AE;
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    /* border: 2px solid green; */
+}
+
+.ul :last-child {
+    background-color: #5861AE;
+    color: #FFFFFF;
+}
+
+.pad-left {
+    padding-left: 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------- */
+
+
+.sidebar_container {
+    background-color: #5861AE;
+    width: 50px;
+    height: 82.5vh;
+    float: left;
+    align-items: center;
+    /* display: inline-block; */
+    /* padding-left: 10px; */
+    overflow: hidden;
+}
+
+.sidebar_container img {
+    margin: 15px 0;
+    width: 50%;
+}
+
+.container {
+    background-color: aliceblue;
+
+}
+
+.orders-container {
+    height: 82.5vh;
+}
+
+.count-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px 30px 0;
+}
+
+.orders-count {
+    margin: 0;
+}
+
+.search {
+    border: none;
+}
+
+.search-bar {
+    border-bottom: 2px solid #ccc;
+}
+
+.no-orders-div {
+    /* border: 2px solid red; */
+    text-align: center;
+    height: 70vh;
+    padding-top: 18vh;
+    margin-top: 5vh;
+    box-sizing: border-box;
+}
+
+.no-orders-div p {
+    color: rgb(137, 137, 137);
+    font-size: 14px;
+}
+
+.create-btn {
+    padding: 5px 25px;
+    cursor: pointer;
+    border: 1px solid #5861AE;
+    background-color: white;
+    color: #5861AE;
+    border-radius: 5px;
+}
+
+.orders-table {
+    /* border: 2px solid red; */
+    width: 88%;
+    margin: 1.5rem auto 0;
+}
+
+.orders-table table {
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.orders-table table tbody tr:nth-child(2n) {
+    background-color: #FAFAFA;
+
+}
+
+.header-row {
+    background: #383737;
+    color: white;
+}
+
+.header-row th,
+.order-row td {
+    padding: 10px 60px 10px 10px;
+
+}
+
+.view-icon {
+    width: 20px;
+    cursor: pointer;
+}
+
+.cancel-order {
+    color: red;
+    cursor: pointer;
+}
+
+.orders-table table tr {
+    border: 1px solid #EAEDF0;
+    border-top: none;
+}
+
+.cancelOrder-container {
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.29);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+
+.orders-container {
+    position: relative;
+}
+
+.delete-popup {
+    width: 415px;
+    height: 210px;
+    background-color: #fff;
+    margin: 250px auto 0;
+    text-align: center;
+    position: relative;
+}
+
+.alert-img {
+    width: 50px;
+    height: 50px;
+    /* margin: 50px 20px 0; */
+    position: absolute;
+    top: 85px;
+    left: 30px;
+}
+
+.cancel-nav {
+    background-color: #5861AE;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.delete-msgAndBtn {
+    width: 240px;
+    margin: 30px auto 0;
+}
+
+.delete-proceed-btn {
+    border: 1px solid #5861AE;
+    background: #5861AE;
+    color: white;
+    border-radius: 4px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.create-search {
+    display: flex;
+    width: 320px;
+    /* border: 2px solid red; */
+    justify-content: space-between;
+}
+
+.allOrders {
+    height: auto;
+    /* border: 2px solid red; */
+    width: 1450px;
+    margin: 0 0 18px 50px;
+}
+
+.order-header {
+    background: #383737;
+    color: white;
+}
+
+.order-header th,
+.order-body td {
+    padding: 15px 60px 15px 10px;
+}
+
+.ProdImg {
+    width: 40px;
+    border: 2px solid #ccc;
+    height: 40px;
+    float: left;
+    margin-right: 20px;
+}
+
+.wash-btn {
+    margin-right: 60px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.order-body td p {
+    margin: 0;
+}
+
+/* .prodType{
+    width: 150px;
+    padding: 0;
+} */
+.quantity {
+    width: 40px;
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+
+.prod-name {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.prod-lorem {
+    width: 200px;
+    color: #76788B;
+}
+
+.prod-total {
+    font-weight: bold;
+    color: #5861AE;
+    font-size: 18px;
+}
+
+.cancel-proceed {
+    text-align: right;
+    /* border: 2px solid green; */
+    margin: 10px 50px 0 0;
+}
+
+.cencel-btn,
+.proceed-btn {
+    padding: 5px 20px;
+    margin-left: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cencel-btn {
+    background: white;
+    border: 1px solid #5861AE;
+    color: #5861AE;
+}
+
+.proceed-btn {
+    background: #5861AE;
+    border: 1px solid #5861AE;
+    color: #fff;
+}
+
+.logout-btn {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.user-logout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.reset-btn {
+    padding: 3px 12px;
+    cursor: pointer;
+    border: 1px solid #5861AE;
+    background-color: white;
+    color: #5861AE;
+    border-radius: 5px;
+    font-size: 12px;
+}
