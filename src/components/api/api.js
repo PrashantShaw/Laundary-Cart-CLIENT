@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 
-const url = 'http://localhost:5000'
+// const url = 'http://localhost:5000'
+const url = 'https://laundary-cart-server.onrender.com'
 
 export const getOrders = async () => {
     try {
