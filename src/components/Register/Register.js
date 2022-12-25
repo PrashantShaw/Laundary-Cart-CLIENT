@@ -20,7 +20,6 @@ const Register = () => {
   const pincodeRef = useRef(null)
   const passwordRef = useRef(null)
 
-  // const [userInfo, setUserInfo] = useState({})
 
   function onRegisterHandler() {
     const userInfo = {
