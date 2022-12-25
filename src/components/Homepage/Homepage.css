@@ -57,7 +57,7 @@
      width: 310px;
      border: none;
      border-bottom: 1px solid #77838F;
-     background-color: #B9C0FD1A ;
+     background-color: transparent;
      padding: 10px 0;
 }
 .sinput{
@@ -68,9 +68,12 @@
 .pass{
     width: 290px;
     border: none;
-    background-color: #B9C0FD1A ;
+    background-color: transparent;
     padding: 10px 0;
-} 
+}
+.Email{
+    background-color: transparent;
+}
 .passdiv{
     width: 310px;
     border-bottom: 1px solid #77838F;

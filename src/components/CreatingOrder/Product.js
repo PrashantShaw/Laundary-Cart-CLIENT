@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './OrdersListPage.css';
 
 import { ReactComponent as WashingMachine } from "../Assests/washing-machine.svg"
@@ -7,7 +7,7 @@ import { ReactComponent as Towel } from "../Assests/towel.svg"
 import { ReactComponent as Bleach } from "../Assests/bleach.svg"
 
 
-function Product({ item, productInfo, productHandler, washHandler }) {
+function Product({ item, productInfo, productHandler, washHandler, resetHandler }) {
 
     const [quantity, setQuantity] = useState(0)
 
@@ -15,6 +15,19 @@ function Product({ item, productInfo, productHandler, washHandler }) {
     const [iron, setIron] = useState(false)
     const [dry, setDry] = useState(false)
     const [bleach, setBleach] = useState(false)
+
+    function notSelected() {
+        setQuantity(0)
+        setMachine(false)
+        setIron(false)
+        setDry(false)
+        setBleach(false)
+    }
+    useEffect(() => {
+        if (!quantity) {
+            notSelected()
+        }
+    }, [quantity])
 
 
     return (
@@ -27,7 +40,8 @@ function Product({ item, productInfo, productHandler, washHandler }) {
                     <p className='prod-lorem'>Here is some information</p>
                 </td>
                 <td>
-                    <input className='quantity' type='number' defaultValue={0} min={0}
+                    <input className='quantity' type='number' min={0}
+                        value={quantity}
                         onChange={(e) => {
                             setQuantity(Number(e.target.value))
                             productHandler(
@@ -38,33 +52,49 @@ function Product({ item, productInfo, productHandler, washHandler }) {
                     />
                 </td>
                 <td>
-                    {/* <img className='wash-btn' src={washingMachine} alt="wash" />
-                    <img className='wash-btn' src={ironing} alt="wash" />
-                    <img className='wash-btn' src={towel} alt="wash" />
-                    <img className='wash-btn' src={bleach} alt="wash" /> */}
                     <WashingMachine className='wash-btn'
                         fill={machine ? "#5861AE" : "#9b9b9b"}
-                        onClick={() => { 
+                        onClick={() => {
+                            if (!quantity) {
+                                alert('Select Quantity first')
+                                return
+                            }
                             washHandler(item.prodType, 'Washing')
-                            setMachine(prev => !prev) }}
+                            setMachine(prev => !prev)
+                        }}
                     />
                     <Ironing className='wash-btn'
                         fill={iron ? "#5861AE" : "#9b9b9b"}
-                        onClick={() => { 
+                        onClick={() => {
+                            if (!quantity) {
+                                alert('Select Quantity first')
+                                return
+                            }
                             washHandler(item.prodType, 'Ironing')
-                            setIron(prev => !prev) }}
+                            setIron(prev => !prev)
+                        }}
                     />
                     <Towel className='wash-btn'
                         fill={dry ? "#5861AE" : "#9b9b9b"}
-                        onClick={() => { 
+                        onClick={() => {
+                            if (!quantity) {
+                                alert('Select Quantity first')
+                                return
+                            }
                             washHandler(item.prodType, 'Dry cleaning')
-                            setDry(prev => !prev) }}
+                            setDry(prev => !prev)
+                        }}
                     />
                     <Bleach className='wash-btn'
                         fill={bleach ? "#5861AE" : "#9b9b9b"}
-                        onClick={() => { 
+                        onClick={() => {
+                            if (!quantity) {
+                                alert('Select Quantity first')
+                                return
+                            }
                             washHandler(item.prodType, 'Chemical')
-                            setBleach(prev => !prev) }}
+                            setBleach(prev => !prev)
+                        }}
                     />
                 </td>
                 <td>
@@ -76,7 +106,15 @@ function Product({ item, productInfo, productHandler, washHandler }) {
                 </td>
                 <td>
                     {!quantity ? '' :
-                        <button className='reset-btn'>Reset</button>}
+                        <button
+                            onClick={() => {
+                                notSelected()
+                                productHandler(
+                                    0,
+                                    item.prodType,
+                                    item.price)
+                            }}
+                            className='reset-btn'>Reset</button>}
                 </td>
             </tr>
         </>

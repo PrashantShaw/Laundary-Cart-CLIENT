@@ -53,8 +53,8 @@ const ViewOrderSummary = ({
               orderInfo.products.map((item) => {
                 subtotal = subtotal + (priceList[item.productType] * item.quantity);
                 // totalItems += item.quantity;
-                return (<li><span className='firstcol'>{item.productType}</span>
-                  <span className='middlecol'>{item.washType.join(",")}</span>
+                return (<li><span className=''>{item.productType}</span>
+                  <span className=''><i>{item.washType.join(", ")}</i></span>
                   <span className='lastcol'>{item.quantity} X {priceList[item.productType]}= <span className='multiply'>{item.quantity * priceList[item.productType]}</span> </span>
                 </li>)
               })
