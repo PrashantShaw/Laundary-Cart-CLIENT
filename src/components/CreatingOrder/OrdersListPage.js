@@ -37,6 +37,7 @@ const OrdersListPage = () => {
       .catch(err => {
         alert(err.message)
       })
+    // eslint-disable-next-line
   }, [showDelPopup])
 
 
@@ -71,15 +72,24 @@ const OrdersListPage = () => {
         </ul>
       </div>
 
-      <div className="sidebar_container">
+      <div className="sidebar_container" style={{ zIndex: 1000 }}>
         <div className="pad-left">
-          <img src={home} alt="home" />
+          <img
+            onClick={() => navigate('/orders')}
+            style={{ cursor: 'pointer' }}
+            src={home} alt="home" />
         </div>
         <div className="pad-left">
-          <img src={more} alt="more" />
+          <img
+            onClick={() => navigate('/create')}
+            style={{ cursor: 'pointer' }}
+            src={more} alt="more" />
         </div>
         <div className="container pad-left">
-          <img src={list} alt="list" />
+          <img
+            onClick={() => navigate('/create')}
+            style={{ cursor: 'pointer' }}
+            src={list} alt="list" />
         </div>
       </div>
 
@@ -169,7 +179,13 @@ const OrdersListPage = () => {
         <div className="delete-popup">
           <div className="cancel-nav">
             <p>Alert</p>
-            <p className="close-delete">X</p>
+            <p
+              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                setShowDelPopup(false)
+                setOrderIdToDel('')
+              }}
+              className="close-delete">X</p>
           </div>
           <img className="alert-img" src={require('../Assests/warning.png')} alt="alert" />
           <div className="delete-msgAndBtn">

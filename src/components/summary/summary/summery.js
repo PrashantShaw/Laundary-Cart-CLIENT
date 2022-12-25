@@ -80,7 +80,10 @@ const Summery = ({ productInfo, setSuccessPopup, setCreateOrderSummary }) => {
       <div className='main'>
         <div className='headsum'>
           <h3>Summery</h3>
-          <span>X</span>
+          <span
+            style={{ cursor: 'pointer' }}
+            onClick={() => setCreateOrderSummary(false)}
+          >X</span>
         </div>
         <div className='optionsum'>
           <select value={orderInfo.storeLocation} onChange={(e) => onStoreSelect(e)} >
@@ -101,8 +104,8 @@ const Summery = ({ productInfo, setSuccessPopup, setCreateOrderSummary }) => {
               products.map((item) => {
                 subtotal = subtotal + (priceList[item.productType] * item.quantity);
                 totalItems += item.quantity;
-                return (<li><span className='firstcol'>{item.productType}</span>
-                  <span className='middlecol'>{item.washType.join(",")}</span>
+                return (<li><span className=''>{item.productType}</span>
+                  <span className=''><i>{item.washType.join(", ")}</i></span>
                   <span className='lastcol'>{item.quantity} X {priceList[item.productType]}= <span className='multiply'>{item.quantity * priceList[item.productType]}</span> </span>
                 </li>)
               })

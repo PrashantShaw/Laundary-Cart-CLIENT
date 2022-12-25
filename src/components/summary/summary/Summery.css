@@ -38,11 +38,15 @@
 .ordervar{
     list-style: none;
     padding: 0;
+    box-sizing: border-box;
+    padding: 0 80px 0 0;
 }
 .ordervar > li{
-    padding-top: 5px;
+    padding: 6px 0;
     border-bottom: 1px solid #707070;
-    padding-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .total{

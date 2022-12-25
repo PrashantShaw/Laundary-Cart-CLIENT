@@ -65,6 +65,10 @@ function CreateOrder() {
 
         console.log(productInfo)
     }
+    // function resetHandler(prod_type) {
+    //     let newProdInfo = productInfo.filter(prod => prod.productType !== prod_type)
+    //     setProductInfo(newProdInfo)
+    // }
 
     function washHandler(prod_type, wash_type) {
         let prodFound = false
@@ -118,13 +122,22 @@ function CreateOrder() {
 
             <div className="sidebar_container">
                 <div className="pad-left">
-                    <img src={home} alt="home" />
+                    <img
+                        onClick={() => navigate('/orders')}
+                        style={{ cursor: 'pointer' }}
+                        src={home} alt="home" />
                 </div>
                 <div className="pad-left">
-                    <img src={more} alt="more" />
+                    <img
+                        onClick={() => navigate('/create')}
+                        style={{ cursor: 'pointer' }}
+                        src={more} alt="more" />
                 </div>
                 <div className="container pad-left">
-                    <img src={list} alt="list" />
+                    <img
+                        onClick={() => navigate('/create')}
+                        style={{ cursor: 'pointer' }}
+                        src={list} alt="list" />
                 </div>
             </div>
 
@@ -159,6 +172,7 @@ function CreateOrder() {
                                     productInfo={productInfo}
                                     productHandler={productHandler}
                                     washHandler={washHandler}
+                                // resetHandler={resetHandler}
                                 />
 
                             })}
@@ -168,7 +182,13 @@ function CreateOrder() {
                 <div className='cancel-proceed'>
                     <button className='cencel-btn'>Cancel</button>
                     <button className='proceed-btn'
-                        onClick={() => setCreateOrderSummary(true)}
+                        onClick={() => {
+                            if (!productInfo.length) {
+                                alert('Select Some items to proceed.')
+                                return
+                            }
+                            setCreateOrderSummary(true)
+                        }}
                     >
                         Proceed
                     </button>
@@ -187,7 +207,7 @@ function CreateOrder() {
                 : null}
 
             {/* -----------------ORDER SUCCESSFULL POPUP----------------- */}
-            {successPopup ?  <OrderSuccessfull /> : null}
+            {successPopup ? <OrderSuccessfull /> : null}
 
         </div>
     )
