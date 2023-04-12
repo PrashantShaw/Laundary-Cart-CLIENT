@@ -19,16 +19,24 @@ const HomePage = () => {
    const passwordRef = useRef(null)
 
    function validateLogin() {
-      login(
-         emailPhoneRef.current.value,
-         passwordRef.current.value
-      )
+      const uid = emailPhoneRef.current.value
+      const password = passwordRef.current.value
+      if (!uid || !password) return
+
+      const signinBtn = document.getElementById('signin-btn')
+      signinBtn.style.cursor = 'wait'
+      signinBtn.style.backgroundColor = '#313a8d'
+      login(uid, password)
          .then((msg) => {
+            signinBtn.style.cursor = 'default'
+            signinBtn.style.backgroundColor = '#4552C1'
             console.log("token :: ", msg.data.token)
             localStorage.setItem('AUTH_TOKEN', msg.data.token)
             navigate('/orders')
          })
          .catch((err) => {
+            signinBtn.style.cursor = 'default'
+            signinBtn.style.backgroundColor = '#4552C1'
             console.log("error :: ", err.response.status)
             if (err.response.status === 404) {
                setInvalidEmailPhone(true)
@@ -57,24 +65,25 @@ const HomePage = () => {
          <div className="right-box">
             <h2 className="signin">SIGN IN</h2>
             <div className="sinput">
-               <input ref={emailPhoneRef} className="Email" type="text" name="Mobile/Email" placeholder="Mobile/Email" 
-               onChange={()=>setInvalidEmailPhone(false)}
+               <input ref={emailPhoneRef} className="Email" type="text" name="Mobile/Email" placeholder="Mobile/Email"
+                  onChange={() => setInvalidEmailPhone(false)}
                />
                {invalidEmailPhone ? <p className="error-msg">Invalid email / phone number</p>
-               : null}
+                  : null}
                <div className="passdiv">
-                  <input ref={passwordRef} className="pass" type="password" name="Password" placeholder="Password" 
-                  onChange={()=>setInvalidPassword(false)}
+                  <input ref={passwordRef} className="pass" type="password" name="Password" placeholder="Password"
+                     onChange={() => setInvalidPassword(false)}
                   />
                   <img className="img" src={require('./padlock.png')} alt="any" />
                </div>
                {invalidPassword ? <p className="error-msg">Invalid password</p>
-               : null}
+                  : null}
 
             </div>
             <span className="forget">Forget Password?</span>
             <div className="signIn-btn">
                <button
+                  id='signin-btn'
                   className="signinbtn"
                   onClick={validateLogin}
                >Sign In

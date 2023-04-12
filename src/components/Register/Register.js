@@ -35,12 +35,22 @@ const Register = () => {
     }
 
     register(userInfo)
+    const registerBtn = document.getElementById('register-btn')
+    registerBtn.style.cursor = 'wait'
+    registerBtn.style.backgroundColor = '#313a8d'
       .then(res => {
         console.log(res)
+        registerBtn.style.cursor = 'default'
+        registerBtn.style.backgroundColor = '#4552C1'
         alert("Registration Successfull.")
         navigate('/')
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+        registerBtn.style.cursor = 'default'
+        registerBtn.style.backgroundColor = '#4552C1'
+        alert("Registration Failed", err.message)
+      })
 
   }
 
@@ -81,7 +91,9 @@ const Register = () => {
           </div>
 
           <span className='label'><input type="checkbox" required />I agree to Terms & Condition receiving marketing and promotional materials</span>
-          <button className='regbtn'
+          <button
+            id='register-btn'
+            className='regbtn'
             onClick={onRegisterHandler}
           >
             Register
